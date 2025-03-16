@@ -31,7 +31,7 @@ public:
         }
         
         buffer->resize(bytesRead);
-        std::cout << "[" << m_socket->GetSockFd() << "] " << buffer->data() << "\n";
+        std::cout << "[" << m_socket->GetSockFd() << "] Rcv: " << buffer->data() << "\n";
         
         return buffer;
     }

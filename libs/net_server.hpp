@@ -11,7 +11,7 @@ class ServerInterface {
 public:
     ServerInterface() {}
 
-    ~ServerInterface() {
+    virtual ~ServerInterface() {
         StopThreads();
         Stop();
     }
@@ -30,7 +30,7 @@ public:
         m_socket.CloseSocket();
     }
     
-private:
+protected:
     void WaitForClientConnection() {
         struct kevent events[10];
         
@@ -55,9 +55,8 @@ private:
                             auto buffer = connection->Receive();
                             auto packet = std::make_shared<Packet<Connection>>();
                             packet->remote = connection;
-                            std::memcpy(&packet->data, buffer->data(), std::min(sizeof(Packet<Connection>::Data), buffer->size()));
+                            std::memcpy(&packet->data, buffer->data(), std::min(sizeof(Header), buffer->size()));
                             HandleData(packet);
-                            m_messageQueue.emplace_back(packet);
                         } else if (events[i].filter == EVFILT_TIMER) {
                             std::cout << "TIME OUT\n";
                         } else {
@@ -95,7 +94,9 @@ private:
                 continue;
             }
             
-            auto data = std::make_shared<std::string>(reinterpret_cast<char*>(&packet->data), sizeof(Packet<Connection>::Data));
+            auto data = std::make_shared<std::string>(reinterpret_cast<char*>(&packet->data), sizeof(Header));
+            std::cout << "[" << connection->GetSockFd() << "] Snd: " << data->data() << "\n";
+            
             connection->Send(data);
         }
     }
@@ -154,7 +155,6 @@ private:
         }
     }
     
-protected:
     virtual void HandleData(std::shared_ptr<T> packet) {
         
     }
