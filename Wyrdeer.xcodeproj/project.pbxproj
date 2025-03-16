@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		8945ACBD2D7DA1B300141E85 /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
 		8945ACD02D7DA2F700141E85 /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
+		8945AD162D86D98800141E85 /* server interface protocol test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "server interface protocol test.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 				8945ACBE2D7DA1B300141E85 /* Server */,
 				8945ACD12D7DA2F700141E85 /* Client */,
 				8945ACA82D7DA0E600141E85 /* Products */,
+				8945AD172D86D98800141E85 /* imgs */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +87,14 @@
 				8945ACD02D7DA2F700141E85 /* Client */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8945AD172D86D98800141E85 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+				8945AD162D86D98800141E85 /* server interface protocol test.gif */,
+			);
+			path = imgs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
