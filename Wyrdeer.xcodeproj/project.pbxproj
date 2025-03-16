@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8945ACA52D7DA0E600141E85 /* CopyFiles */ = {
+		8945ACBB2D7DA1B300141E85 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		8945ACCE2D7DA2F700141E85 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -19,19 +28,37 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8945ACA72D7DA0E600141E85 /* Wyrdeer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Wyrdeer; sourceTree = BUILT_PRODUCTS_DIR; };
+		8945ACBD2D7DA1B300141E85 /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
+		8945ACD02D7DA2F700141E85 /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8945ACA92D7DA0E600141E85 /* Wyrdeer */ = {
+		8945ACBE2D7DA1B300141E85 /* Server */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Wyrdeer;
+			path = Server;
+			sourceTree = "<group>";
+		};
+		8945ACC42D7DA20100141E85 /* libs */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = libs;
+			sourceTree = "<group>";
+		};
+		8945ACD12D7DA2F700141E85 /* Client */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8945ACA42D7DA0E600141E85 /* Frameworks */ = {
+		8945ACBA2D7DA1B300141E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8945ACCD2D7DA2F700141E85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,7 +71,9 @@
 		8945AC9E2D7DA0E600141E85 = {
 			isa = PBXGroup;
 			children = (
-				8945ACA92D7DA0E600141E85 /* Wyrdeer */,
+				8945ACC42D7DA20100141E85 /* libs */,
+				8945ACBE2D7DA1B300141E85 /* Server */,
+				8945ACD12D7DA2F700141E85 /* Client */,
 				8945ACA82D7DA0E600141E85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +81,8 @@
 		8945ACA82D7DA0E600141E85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8945ACA72D7DA0E600141E85 /* Wyrdeer */,
+				8945ACBD2D7DA1B300141E85 /* Server */,
+				8945ACD02D7DA2F700141E85 /* Client */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,26 +90,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8945ACA62D7DA0E600141E85 /* Wyrdeer */ = {
+		8945ACBC2D7DA1B300141E85 /* Server */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8945ACAE2D7DA0E600141E85 /* Build configuration list for PBXNativeTarget "Wyrdeer" */;
+			buildConfigurationList = 8945ACC12D7DA1B300141E85 /* Build configuration list for PBXNativeTarget "Server" */;
 			buildPhases = (
-				8945ACA32D7DA0E600141E85 /* Sources */,
-				8945ACA42D7DA0E600141E85 /* Frameworks */,
-				8945ACA52D7DA0E600141E85 /* CopyFiles */,
+				8945ACB92D7DA1B300141E85 /* Sources */,
+				8945ACBA2D7DA1B300141E85 /* Frameworks */,
+				8945ACBB2D7DA1B300141E85 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				8945ACA92D7DA0E600141E85 /* Wyrdeer */,
+				8945ACBE2D7DA1B300141E85 /* Server */,
+				8945ACC42D7DA20100141E85 /* libs */,
 			);
-			name = Wyrdeer;
+			name = Server;
 			packageProductDependencies = (
 			);
-			productName = Wyrdeer;
-			productReference = 8945ACA72D7DA0E600141E85 /* Wyrdeer */;
+			productName = Server;
+			productReference = 8945ACBD2D7DA1B300141E85 /* Server */;
+			productType = "com.apple.product-type.tool";
+		};
+		8945ACCF2D7DA2F700141E85 /* Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8945ACD42D7DA2F700141E85 /* Build configuration list for PBXNativeTarget "Client" */;
+			buildPhases = (
+				8945ACCC2D7DA2F700141E85 /* Sources */,
+				8945ACCD2D7DA2F700141E85 /* Frameworks */,
+				8945ACCE2D7DA2F700141E85 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8945ACD12D7DA2F700141E85 /* Client */,
+			);
+			name = Client;
+			packageProductDependencies = (
+			);
+			productName = Client;
+			productReference = 8945ACD02D7DA2F700141E85 /* Client */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +144,10 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					8945ACA62D7DA0E600141E85 = {
+					8945ACBC2D7DA1B300141E85 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					8945ACCF2D7DA2F700141E85 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -110,13 +166,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8945ACA62D7DA0E600141E85 /* Wyrdeer */,
+				8945ACBC2D7DA1B300141E85 /* Server */,
+				8945ACCF2D7DA2F700141E85 /* Client */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8945ACA32D7DA0E600141E85 /* Sources */ = {
+		8945ACB92D7DA1B300141E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8945ACCC2D7DA2F700141E85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,7 +305,7 @@
 			};
 			name = Release;
 		};
-		8945ACAF2D7DA0E600141E85 /* Debug */ = {
+		8945ACC22D7DA1B300141E85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -249,7 +313,23 @@
 			};
 			name = Debug;
 		};
-		8945ACB02D7DA0E600141E85 /* Release */ = {
+		8945ACC32D7DA1B300141E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8945ACD52D7DA2F700141E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8945ACD62D7DA2F700141E85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -269,11 +349,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8945ACAE2D7DA0E600141E85 /* Build configuration list for PBXNativeTarget "Wyrdeer" */ = {
+		8945ACC12D7DA1B300141E85 /* Build configuration list for PBXNativeTarget "Server" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8945ACAF2D7DA0E600141E85 /* Debug */,
-				8945ACB02D7DA0E600141E85 /* Release */,
+				8945ACC22D7DA1B300141E85 /* Debug */,
+				8945ACC32D7DA1B300141E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8945ACD42D7DA2F700141E85 /* Build configuration list for PBXNativeTarget "Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8945ACD52D7DA2F700141E85 /* Debug */,
+				8945ACD62D7DA2F700141E85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
